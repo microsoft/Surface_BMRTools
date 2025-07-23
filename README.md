@@ -30,7 +30,7 @@ msiexec /a "C:\Path\To\Installer.msi" /qb TARGETDIR="C:\Path\To\ExtractedFiles"
 
 * Please connect the usbkey to the surface device you have to install surface recovery image with postdeploy supported after above steps done
 
-* Please collect logs C:\$SysReset\Logs\setupact.log, D:\sources\postdeploy\StartPostDeploy.log and D:\sources\postdeploy\StartPostDeploy.err to double check if postdeploy succeeded as expected, the existence of D:\sources\postdeploy\StartPostDeploy.err means there are postdeploy failures.
+* Please collect logs C:\\$SysReset\Logs\setupact.log, D:\sources\postdeploy\StartPostDeploy.log and D:\sources\postdeploy\StartPostDeploy.err to double check if postdeploy succeeded as expected, the existence of D:\sources\postdeploy\StartPostDeploy.err means there are postdeploy failures.
 
 # Known issues
 * If you put KB5043080 and latest LCU into same folder under <usbroot>\sources\postdeploy\updates, KB5043080 installation will fail
