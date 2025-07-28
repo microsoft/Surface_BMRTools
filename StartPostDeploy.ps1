@@ -48,7 +48,7 @@ function Invoke-UpdatesPostDeploy {
         foreach ($update in $updates) {
             Write-Host "Installing update: $($update.FullName)"
 
-            # use dism.exe becasue dism cmdlet was't available in WinRE
+            # Use dism.exe because dism cmdlets are not available in WinRE.
             $splat = @(
                 "/Image:${OSLetter}:\"
                 '/Add-Package'
@@ -97,7 +97,7 @@ function Invoke-DriversPostDeploy {
         if (Get-ChildItem -Path $driversPath\* -Recurse -Include '*.inf') {
             Write-Host "Installing drivers from $driversPath"
 
-            # use dism.exe becasue dism cmdlet was't available in WinRE
+            # Use dism.exe because dism cmdlets are not available in WinRE.
             $splat = @(
                 "/Image:${OSLetter}:\"
                 '/Add-Driver'
