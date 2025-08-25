@@ -131,7 +131,7 @@ function StartPostDeploy {
     $PostDeployRoot = "$PSScriptRoot\postdeploy"
     Write-Host "PostDeployRoot = $PostDeployRoot"
 
-    Get-ChildItem -Path $PostDeployRoot\* -Include dism.postdeploy.*.log | Remove-Item -Force
+    Get-ChildItem -Path $PostDeployRoot\* -Include dism.postdeploy.*.log -Force -ErrorAction Ignore | Remove-Item -Force
 
     $postDeployFeatures = @(
         'Updates',
